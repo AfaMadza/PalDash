@@ -22,11 +22,15 @@ const setRequest = (state, action) => {
     } );
 };
 
+console.log('[RequestBuilder_state]:', this.state);
+
 const reducer = ( state = initialState, action ) => {
     switch ( action.type ) {
-        case actionTypes.SET_REQUEST: return setRequest(state, action);    
+        case actionTypes.SET_REQUEST: return setRequest(state, action);            
         default: return state;
+
     }
 };
+
 
 export default reducer;
