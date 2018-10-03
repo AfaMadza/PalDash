@@ -145,12 +145,16 @@ class Auth extends Component {
                 {authRedirect}
                 {errorMessage}
                 <form onSubmit={this.submitHandler}>
+                <div className={classes.welcome}>Hello There!</div>
+                    <div className={classes.subtitle}>Before placing an order you need to create an account and press submit, or switch to log in if you already have one.</div>
                     {form}
-                    <Button btnType="Success">SUBMIT</Button>
+                    {/* <Button btnType="Success">SUBMIT</Button> */}
+                    <button className={classes.ghostRound + ' ' + classes.fullWidth}>Submit</button>
                 </form>
-                <Button 
-                    clicked={this.switchAuthModeHandler}
-                    btnType="Danger">SWITCH TO {this.state.isSignup ? 'SIGNIN' : 'SIGNUP'}</Button>
+                <button 
+                    className={classes.ghostRound + ' ' + classes.fullWidth}
+                    onClick={this.switchAuthModeHandler}>
+                    {this.state.isSignup ? 'Log In' : 'Create Account'}</button>
             </div>
         );
     }

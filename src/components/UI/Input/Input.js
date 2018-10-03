@@ -48,7 +48,7 @@ const input = ( props ) => {
     }
 
     return (
-        <div className={classes.Input}>
+        <div className={classes.Input + ' ' + classes.fullWidth}>
             <label className={classes.Label}>{props.label}</label>
             {inputElement}
         </div>

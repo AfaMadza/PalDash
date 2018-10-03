@@ -9,7 +9,7 @@ const checkoutSummary = (props) => {
         <div className={classes.CheckoutSummary}>
             <h1>We hope you enjoy your meal!</h1>
             <div style={{width: '100%', margin: 'auto'}}>
-                <Order dropOff={props.dropOff} pickUp={props.pickuP} mealId={props.mealId}/>
+                <Order name={props.name} mealId={props.mealId}/>
             </div>
             <Button 
                 btnType="Danger"

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Aux from '../../hoc/Aux';
+import Aux from '../../hoc/Auxiliary';
 import Request from '../../components/Request/Request';
 //import RequestControls from '../../components/Request/RequestControls/RequestControls';
 import Modal from '../../components/UI/Modal/Modal';
