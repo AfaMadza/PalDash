@@ -216,9 +216,9 @@ class Request extends Component {
 
             </form>
         );
-        // if ( this.props.loading ) {
-        //     form = <Spinner />;
-        // }
+        if ( this.props.loading ) {
+            form = <Spinner />;
+        }
         return (
             <div className={classes.Request}>
                 <h4>Delivery Request Form</h4>

@@ -124,9 +124,9 @@ class Auth extends Component {
                 changed={( event ) => this.inputChangedHandler( event, formElement.id )} />
         ) );
 
-        // if (this.props.loading) {
-        //     form = <Spinner />
-        // }
+        if (this.props.loading) {
+            form = <Spinner />
+        }
 
         let errorMessage = null;
 

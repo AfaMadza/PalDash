@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Aux from '../../../hoc/Aux';
+import Aux from '../../../hoc/Auxiliary';
 import Button from '../../UI/Button/Button';
 
 class RequestSummary extends Component {
@@ -11,16 +11,14 @@ class RequestSummary extends Component {
 
     render () {
         let requestSummary = <p>No Requests Yet</p>;
-        if (this.props.orderData) {
-            requestSummary = Object.keys( this.props.orderData )
-            .map( itemKey => {
+        if (this.props.order) {
+            requestSummary = Object.keys( this.props.order.orderData ).map( itemKey => {
                 return (
                     <li key={itemKey}>
-                        <span style={{ textTransform: 'capitalize' }}>{itemKey}</span>: {this.props.orderData[itemKey]}
+                        <span style={{ textTransform: 'capitalize' }}>{itemKey.replace(/([A-Z])/g, ' $1').trim()}: {this.props.order.orderData[itemKey]}</span>
                     </li> );
             } );
         }
-        console.log('[RequestSummary]:', requestSummary);
         return (
             <Aux>
                 <h3>Your Order</h3>
