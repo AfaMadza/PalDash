@@ -1,10 +1,10 @@
 
 @media (min-width: 600px) {
-    .CheckoutSummary {
+    .Conf {
         width: 500px;
     }
 }
-.CheckoutSummary {
+.Conf {
     margin: 20px auto;
     /* width: 80%; */
     text-align: center;
@@ -16,6 +16,7 @@
     background: -webkit-linear-gradient(#8CA6DB, #B993D6);
     background: linear-gradient(#8CA6DB, #B993D6);
     opacity: 0.85;
+    color: #eee;
     filter: alpha(opacity=85);
     z-index: 1;
 }

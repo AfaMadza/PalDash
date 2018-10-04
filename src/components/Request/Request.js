@@ -138,7 +138,10 @@ class Request extends Component {
         }
         this.props.onRequestSubmit(order);
         this.props.requested();
-        this.props.onRequest(order, this.props.token);
+        console.log('[REQ_purchasing]:', this.props.purchasing);
+        if (this.props.purchasing) {
+            this.props.onRequest(order, this.props.token);
+        }
     }
 
     checkValidity(value, rules) {
@@ -212,7 +215,7 @@ class Request extends Component {
                         touched={formElement.config.touched}
                         changed={(event) => this.inputChangedHandler(event, formElement.id)} />
                 ))}
-                <Button btnType="Success" disabled={!this.state.formIsValid}>ORDER</Button>
+                <Button btnType="fullWidth" disabled={!this.state.formIsValid}>ORDER</Button>
 
             </form>
         );
@@ -221,7 +224,7 @@ class Request extends Component {
         }
         return (
             <div className={classes.Request}>
-                <h4>Delivery Request Form</h4>
+                <div className={classes.welcome}>Delivery Request Form</div>
                 {form}
             </div>
         );

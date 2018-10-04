@@ -1,0 +1,12 @@
+.Mascot {
+    background-color: none;
+    padding: 0px;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.Mascot img {
+    height: 100%;
+    margin-bottom: 25px;
+}

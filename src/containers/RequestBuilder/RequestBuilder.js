@@ -12,7 +12,8 @@ import axios from '../../axios-orders';
 
 class RequestBuilder extends Component {
     state = {
-        requesting: false
+        requesting: false,
+        purchasing: false,
     }
 
     requestHandler = () => {
@@ -29,6 +30,8 @@ class RequestBuilder extends Component {
     }
 
     requestContinueHandler = () => {
+        this.setState({purchasing: true});
+        console.log('[RB_purchasingState]:', this.state.purchasing);
         this.props.onRequestInit();
         this.props.history.push('/checkout');
     }
@@ -45,6 +48,7 @@ class RequestBuilder extends Component {
                     <Request
                         purchasable={this.updateRequestState(this.props.order)}
                         requested={this.requestHandler}
+                        purchasing={this.state.purchasing}
                         isAuth={this.props.isAuthenticated}
                         />
                     {/* <RequestControls /> */}

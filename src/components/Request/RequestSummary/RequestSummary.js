@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Aux from '../../../hoc/Auxiliary';
 import Button from '../../UI/Button/Button';
+import classes from './RequestSummary.css';
 
 class RequestSummary extends Component {
     // This could be a functional component, doesn't have to be a class
@@ -20,15 +21,15 @@ class RequestSummary extends Component {
             } );
         }
         return (
-            <Aux>
-                <h3>Your Order</h3>
-                <p>Delivery Details:</p>
-                <ul>
+            <Aux className={classes.RequestSummary}>
+                <h3 className={classes.welcome}>Your Order</h3>
+                <p className={classes.subtitle}>Delivery Details:</p>
+                <ul className={classes.noBullets}>
                     {requestSummary}
                 </ul>
-                <p>Continue to Checkout?</p>
-                <Button btnType="Danger" clicked={this.props.requestCancelled}>CANCEL</Button>
-                <Button btnType="Success" clicked={this.props.requestContinued}>CONTINUE</Button>
+                <p className={classes.pCenter}>Continue to Checkout?</p>
+                <Button btnType="Danger" clicked={this.props.requestCancelled}>Cancel</Button>
+                <Button btnType="Success" clicked={this.props.requestContinued}>Continue</Button>
             </Aux>
         );
     }

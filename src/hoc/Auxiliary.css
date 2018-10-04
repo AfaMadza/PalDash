@@ -1,0 +1,16 @@
+.RequestSummary {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: -webkit-linear-gradient(#8CA6DB, #B993D6);
+    background: linear-gradient(#8CA6DB, #B993D6);
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+    z-index: 1;
+    font-family: roboto;
+}
