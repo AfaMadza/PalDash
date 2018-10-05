@@ -222,10 +222,10 @@ class Request extends Component {
         if ( this.props.loading ) {
             form = <Spinner />;
         }
-        let instructions = null;
-        !this.props.token 
-        ? instructions = <h3 className={classes.subtitle}>Please go to the Login page to create an account or sign in before ordering.</h3> 
-        : null;
+        let instructions = (
+            !this.props.token ? <h3 className={classes.subtitle}>Please go to the Login page to create an account or sign in before ordering.</h3> : null
+        );
+        
                 
         
         return (

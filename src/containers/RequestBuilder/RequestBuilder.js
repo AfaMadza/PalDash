@@ -31,7 +31,6 @@ class RequestBuilder extends Component {
 
     requestContinueHandler = () => {
         this.setState({purchasing: true});
-        console.log('[RB_purchasingState]:', this.state.purchasing);
         this.props.onRequestInit();
         this.props.history.push('/checkout');
     }
