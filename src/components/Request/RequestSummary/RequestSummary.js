@@ -16,14 +16,14 @@ class RequestSummary extends Component {
             requestSummary = Object.keys( this.props.order.orderData ).map( itemKey => {
                 return (
                     <li key={itemKey}>
-                        <span style={{ textTransform: 'capitalize' }}>{itemKey.replace(/([A-Z])/g, ' $1').trim()}: {this.props.order.orderData[itemKey]}</span>
+                        <span className={classes.spanR}style={{ textTransform: 'capitalize' }}>{itemKey.replace(/([A-Z])/g, ' $1').trim()}: {this.props.order.orderData[itemKey]}</span>
                     </li> );
             } );
         }
         return (
             <Aux className={classes.RequestSummary}>
                 <h3 className={classes.welcome}>Your Order</h3>
-                <p className={classes.subtitle}>Delivery Details:</p>
+                <h3 className={classes.subtitle}>Delivery Details:</h3>
                 <ul className={classes.noBullets}>
                     {requestSummary}
                 </ul>

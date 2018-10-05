@@ -8,8 +8,7 @@
     border-radius: 10px;
     padding: 10px;
     box-sizing: border-box;
-    background: -webkit-linear-gradient(#8CA6DB, #B993D6);
-    background: linear-gradient(#8CA6DB, #B993D6);
+    background: #0363AE;
     opacity: 0.85;
     filter: alpha(opacity=85);
     z-index: 1;

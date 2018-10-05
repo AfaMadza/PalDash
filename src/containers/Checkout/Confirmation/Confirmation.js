@@ -8,18 +8,17 @@ import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler'
 import * as actions from '../../../store/actions';
 
 class Confirmation extends Component {
-    state = {
-        order: this.props.order,
-        confirmed: false
-    }
+    // state = {
+    //     order: this.props.order,
+    //     confirmed: false
+    // }
 
     orderHandler = ( event ) => {
         event.preventDefault();
-        let order = this.state.order;
+        let order = this.props.order;
         this.setState({confirmed: true});
-        console.log('[CONF_ST]:', this.state.confirmed);
         this.props.onRequest(order, this.props.token);
-        // this.props.history.push('/');
+        this.props.history.push('/orders');
     }
 
      render () {
@@ -28,7 +27,7 @@ class Confirmation extends Component {
             confirmation = Object.keys( this.props.order.orderData ).map( itemKey => {
                 return (
                     <li key={itemKey}>
-                        <span style={{ textTransform: 'capitalize' }}>{itemKey.replace(/([A-Z])/g, ' $1').trim()}: {this.props.order.orderData[itemKey]}</span>
+                        <span className={classes.spanConf}style={{ textTransform: 'capitalize' }}>{itemKey.replace(/([A-Z])/g, ' $1').trim()}: {this.props.order.orderData[itemKey]}</span>
                     </li> );
             } );
         }

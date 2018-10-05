@@ -17,8 +17,7 @@
     border-radius: 10px;
     padding: 10px;
     box-sizing: border-box;
-    background: -webkit-linear-gradient(#8CA6DB, #B993D6);
-    background: linear-gradient(#8CA6DB, #B993D6);
+    background: #0363AE;
     opacity: 0.85;
     filter: alpha(opacity=85);
     z-index: 1;
@@ -42,7 +41,14 @@ h4 {
 select {
     color: rgb(169, 169, 169);
 }
-
+.subtitle {
+    text-align: center;
+    line-height: 1em;
+    font-weight: 100;
+    letter-spacing: 0px;
+    letter-spacing: 0.02rem;
+    color: rgba(255, 255, 255, 0.65);
+  } 
 
 @media (min-width: 600px) {
     .Request {

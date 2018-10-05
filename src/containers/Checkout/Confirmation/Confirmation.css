@@ -17,8 +17,7 @@
     border-radius: 10px;
     padding: 10px;
     box-sizing: border-box;
-    background: -webkit-linear-gradient(#8CA6DB, #B993D6);
-    background: linear-gradient(#8CA6DB, #B993D6);
+    background: #0363AE;
     opacity: 0.85;
     filter: alpha(opacity=85);
     z-index: 1;
@@ -57,4 +56,28 @@ select {
     .Confirmation {
         width: 500px;
     }
+}
+.spanConf {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid;
+    margin-left: -20px;
+    margin-bottom: 2px;
+    padding-top: 1px;
+    padding-bottom: 1.5px;
+    background-color: #0363AE;
+    -webkit-transition:all 0.5s ease-out;
+    -moz-transition:all 0.5s ease-out;
+    -ms-transition:all 0.5s ease-out;
+    -o-transition:all 0.5s ease-out;
+    transition:all 0.5s ease-out;
+}
+.spanConf:hover {
+    /* box-shadow: 10px 2px 2px #fff; */
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1);
 }

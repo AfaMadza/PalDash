@@ -15,15 +15,14 @@ const order = ( props ) => {
     console.log('orderData', props);
 
     const orderOutput = orderData.map(or => {
-        return <span 
-            style={{
-                textTransform: 'capitalize',
-                display: 'block',
-                margin: '0 8px',
-                border: 'none',
-                padding: '5px'
-                }}
-            
+        return <span className={classes.spanO}
+        style={{
+            textTransform: 'capitalize',
+            display: 'block',
+            margin: '0 8px',
+            border: '1px solid #eee',
+            padding: '5px',
+        }}
             key={or.name}>{or.name.replace(/([A-Z])/g, ' $1').trim()}: {or.value}</span>;
     });
 
